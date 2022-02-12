@@ -1,0 +1,118 @@
+swagger: '2.0'
+info:
+  title: Coffee Rest API
+  description: Test description
+  termsOfService: https://www.google.com/policies/terms/
+  contact:
+    email: ziang6@ualberta.ca
+  license:
+    name: Test License
+  version: v1
+host: localhost:8000
+schemes:
+  - http
+basePath: /
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  Basic:
+    type: basic
+security:
+  - Basic: []
+paths:
+  /coffeeApi/:
+    get:
+      operationId: coffeeApi_list
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - coffeeApi
+    parameters: []
+  /coffeeApi/coffee-add/:
+    post:
+      operationId: coffeeApi_coffee-add_create
+      description: ''
+      parameters: []
+      responses:
+        '201':
+          description: ''
+      tags:
+        - coffeeApi
+    parameters: []
+  /coffeeApi/coffee-del/{id}:
+    get:
+      operationId: coffeeApi_coffee-del_read
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - coffeeApi
+    parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+  /coffeeApi/coffee-detail/{id}/:
+    get:
+      operationId: coffeeApi_coffee-detail_read
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - coffeeApi
+    parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+  /coffeeApi/coffee-list/:
+    get:
+      operationId: coffeeApi_coffee-list_list
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+      tags:
+        - coffeeApi
+    parameters: []
+  /coffeeApi/coffee-modify/{id}:
+    post:
+      operationId: coffeeApi_coffee-modify_create
+      description: ''
+      parameters: []
+      responses:
+        '201':
+          description: ''
+      tags:
+        - coffeeApi
+    parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+  /coffeeApi/coffee-update/{id}:
+    post:
+      operationId: coffeeApi_coffee-update_create
+      description: ''
+      parameters: []
+      responses:
+        '201':
+          description: ''
+      tags:
+        - coffeeApi
+    parameters:
+      - name: id
+        in: path
+        required: true
+        type: string
+definitions: {}
